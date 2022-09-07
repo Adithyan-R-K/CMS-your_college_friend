@@ -1,0 +1,10 @@
+.dritem {
+  color: rgba(255,255,255,0.6);
+}
+
+.dritem:hover {
+  color: #ffffff;
+  background-color: rgba(255,255,255,0);
+  font-weight: 500;
+}
+

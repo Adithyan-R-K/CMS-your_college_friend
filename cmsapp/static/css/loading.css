@@ -1,0 +1,14 @@
+.lod {
+  position: fixed;
+  top: 100px;
+  left: -150px;
+}
+
+@media (min-width: 768px) {
+  .lod {
+    position: relative;
+    top: 100px;
+    left: 50px;
+  }
+}
+

@@ -1,0 +1,59 @@
+input[id="ph-dpink"]::-webkit-input-placeholder {
+  color: #ffb6bf;
+}
+
+.btn.btn-primary.d-block.w-100 {
+}
+
+textarea[id="ph-w"]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+input[id="ph-w"]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+body {
+  background: url("../../static/img/student%20login/blackboard.jpg") top / cover no-repeat;
+}
+
+@media (min-width: 992px) {
+  body {
+    background: url("../../static/img/student%20login/blackboard.jpg") center / cover no-repeat;
+  }
+}
+
+.login-clean {
+  background-color: rgba(0,0,0,0);
+}
+
+.forgot.account {
+  visibility: hidden;
+}
+
+@media (max-width: 576px) {
+  .forgot.account {
+    visibility: visible;
+  }
+}
+
+.floating {
+  transform: translateY(0px);
+  animation-name: floating;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+

@@ -1,0 +1,39 @@
+.btnindex {
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 50px;
+  color: #000000;
+  z-index: 1;
+  background: rgba(0,0,0,0) !important;
+  position: relative;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.btnindex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  right: 1px;
+  height: 100%;
+  width: 0;
+  border-radius: 50px;
+  background-color: #ffffff !important;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+}
+
+.btnindex:hover {
+  color: #48bec8 !important;
+}
+
+.btnindex:hover::before {
+  width: 97%;
+}
+
