@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>e-education</title>
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="static/img/index/Education-amico.svg">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/css/abcd.css">
+    <link rel="stylesheet" href="static/css/btn_index.css">
+    <link rel="stylesheet" href="static/css/Footer-Clean.css">
+    <link rel="stylesheet" href="static/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/loading.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="static/css/Student.css">
+
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</head>
+
+<body class="user-select-none">
+    <div class="container">
+        <div class="row std">
+            <div class="col-auto col-md-12 d-lg-flex justify-content-lg-center"><img src="static/img/student%20login/txt.png" width="523" height="240"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div><img src="static/img/student%20login/arrow.png" width="180px" height="180px" style="transform: translateY(313px);"></div><a href="#" data-bs-target="#modal-1" data-bs-toggle="modal"><img src="static/img/student%20login/signup.png" width="180px" height="180px"></a>
+            </div>
+            <div class="col-md-6">
+                <section class="login-clean" style="padding-top: 10px;">
+                    <form class="shadow-none" action="/students_"  method="post" style="background: url(&quot;static/img/student%20login/box.png&quot;) center / contain no-repeat, rgba(255,255,255,0);border-style: none;">
+                        {% csrf_token %}
+                        <h2 class="visually-hidden">Login Form</h2>
+                        {% if request.GET.name %}
+                        <input type="hidden" name="name" value="{{request.GET.name}}">
+                        {% endif %}
+                        <div class="illustration" style="background: url(&quot;static/img/student%20login/icon%202.png&quot;) center no-repeat;"><img class="invisible" src="static/img/student%20login/icon%202.png" width="100px" height="100px"></div>
+                        <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required=""></div>
+                        <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required=""></div>
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: url(&quot;static/img/student%20login/button_in.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: rgba(255,255,255,0);">Log In</button></div>
+                        <p style="font-family: 'Architects Daughter', serif;color: var(--bs-gray-300);"> {{ mes }} </p>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <section class="login-clean" style="padding-top: 10px;background: url(&quot;static/img/student%20login/blackboard.jpg&quot;) top / cover no-repeat;border: 9px solid var(--bs-light);">
+                    <form class="shadow-none" action="/students" method="post" style="border-style: none;">
+                        {% csrf_token %}
+                        <h2 class="visually-hidden">Login Form</h2>
+                        <div class="illustration" style="background: url(&quot;static/img/student%20login/icon%202.png&quot;) center no-repeat;"><img class="invisible" src="static/img/student%20login/icon%202.png" width="100px" height="100px"></div>
+                        <div class="mb-3"><input class="form-control" type="text" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required="" placeholder="Name" name="name" ></div>
+                        <div class="mb-3"><textarea class="form-control" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" rows="2" cols="1" placeholder="Address" name="address" required=""></textarea></div>
+                        <div class="mb-3"><input class="form-control" type="text" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required="" placeholder="Father's Name" name="fname" ></div>
+                        <div class="mb-3"><input class="form-control" type="text" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required="" placeholder="Mother's Name" name="mname" ></div>
+                        <div class="mb-3"><input class="form-control" type="tel" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" placeholder="Phone" name="phone" required=""  maxlength="10" ></div>
+                        <div class="mb-3"><input class="form-control" type="email" placeholder="Email" name="email" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: var(--bs-gray-300);font-family: 'Architects Daughter', serif;" required=""></div>
+                        <div class="mb-3"><select class="form-select form-control" name="course" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: #818283;font-family: 'Architects Daughter', serif;" required="">
+                                <option value="BSc Computer Science" selected="">BSc Computer Science</option>
+                                <option value="BCA">BCA</option>
+                                <option value="Electronics">Electronics</option>
+                            </select></div>
+                        <div class="mb-3"><select class="form-select form-control" name="sem" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: #818283;font-family: 'Architects Daughter', serif;" required="">
+                                <option value="1" selected="">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select></div>
+                        <div class="mb-3"><input class="form-control" type="password" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: #818283;font-family: 'Architects Daughter', serif;" placeholder="Password" name="password"></div>
+                        <div class="mb-3"><input class="form-control" type="text" style="background: url(&quot;static/img/student%20login/input%202.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: #818283;font-family: 'Architects Daughter', serif;" placeholder="Admission No." name="adm"></div>
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: url(&quot;static/img/student%20login/button_up.png&quot;) center / cover no-repeat, rgba(247,249,252,0);border-style: none;color: rgba(255,255,255,0);">Log In</button></div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="static/js/agency.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>e-education</title>
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="static/img/index/Education-amico.svg">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/css/abcd.css">
+    <link rel="stylesheet" href="static/css/btn_index.css">
+    <link rel="stylesheet" href="static/css/Footer-Clean.css">
+    <link rel="stylesheet" href="static/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/loading.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="static/css/Student.css">
+</head>
+
+<body style="user-select: none;background: linear-gradient(123deg, rgba(13,110,253,0), var(--bs-info) 68%);height: 730.8px;">
+    <div class="container">
+         {{mes}}
+        <form class="login-clean"  method="post" action="/parents">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="text-capitalize text-center align-self-center" style="color: #eaf2ff;font-size: 35px;font-weight: bold;width: 272px;">Parent's Sign up</h1>
+                    </div>
+                    <div class="illustration"><i class="fas fa-user-friends" style="color: #deebff;"></i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center mb-3"><input class="form-control w-600 parent-input" type="text" placeholder="Name" Name="name" required="" maxlength="30"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center mb-3"><textarea class="form-control w-600 parent-input" required="" placeholder="Address" name="address"  cols="1" rows="2"></textarea></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center justify-content-md-end mb-3"><input class="form-control w-300 parent-input" type="text" placeholder="Father or mother of" name="father" required="" maxlength="30"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center justify-content-md-start mb-3"><input class="form-control w-300 parent-input" type="number" placeholder="Admission No." name="admission" required=""></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex d-sm-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-end mb-3"><input class="form-control w-300 parent-input" type="tel" minlength="10" maxlength="10" required="" placeholder="Phone" name="phone"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex d-sm-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-start mb-3"><input class="form-control w-300 parent-input" type="email" name="email" placeholder="Email" name="email" required="" autocomplete="off"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex d-sm-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-end mb-3"><input class="form-control w-300 parent-input" type="password" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" name="password"  required="" maxlength="10" minlength="6" placeholder="Password " title="Min. 8 character with  following a-z,A-Z,0-9"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex d-sm-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-start mb-3"><input class="form-control w-300 parent-input" type="password"  required="" name="password" maxlength="10" minlength="6" placeholder="Confirm Password"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center mb-3"><button class="btn btn-primary d-block border-0 w-300" type="submit" style="border-radius: 20px;background: rgb(0,212,255);box-shadow: inset 4px 4px 5px 0px rgb(0,195,234);">Sign Up</button></div>
+                </div>
+                <div class="col-md-12"><a class="d-flex justify-content-center forgot" href="/parent" style="color: var(--bs-gray);font-size: 13px;">Already have account here !</a></div>
+            </div>
+        </form>
+    </div>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="static/js/agency.js"></script>
+</body>
+
+</html>

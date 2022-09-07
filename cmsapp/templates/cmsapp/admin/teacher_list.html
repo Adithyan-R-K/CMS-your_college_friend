@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="static/admin_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="static/admin_assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/admin_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/admin_assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/admin_assets/css/custom.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Login-Form-Clean-1.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Team-Grid.css">
+</head>
+
+<body id="page-top">
+{% csrf_token %}
+    <div id="wrapper">
+
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon"><i class="fas fa-user-cog"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>admin</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="/a_index"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/teacher_list"><i class="fas fa-chalkboard-teacher"></i><span>Teachers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/student_list"><i class="fas fa-user-graduate"></i><span>Students</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/courses"><i class="fas fa-book"></i><span>Courses</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/subject"><i class="fas fa-book"></i><span>Subject</span></a></li>
+                    <li class="nav-item dropdown" style="transform: translateX(7px);"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown"><i class="fas fa-money-check-alt"></i><span>Fees</span></a>
+                        <div class="dropdown-menu text-start" style="width: 210px;background: rgba(255,255,255,0.5);border-style: none;"><a class="dropdown-item dritem" href="/student_fee">Paid student details</a><a class="dropdown-item dritem" href="/add_fee">Add fee details<br></a></div>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="me-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Admin</span><img class="border rounded-circle img-profile" src="static/admin_assets/img/avatars/avatar1.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="/a_profile"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="/a_index"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                  {{ mes }}
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Teachers</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold">&nbsp;Teachers List</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                             <th id="id">Teacher Id</th>
+                                            <th id="std_name">Teacher Name</th>
+
+                                            <th>Department</th>
+                                            <th>Address</th>
+                                            <th>Phone</th>
+                                            <th>Email</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            {% for id,tchr_name,tchr_address,tchr_phone,tchr_email,tchr_dept,status in records %}
+                                             <form method="post" action="/teacher_approve">
+                                                 {% csrf_token %}
+                                            <td><input type="hidden" name="t_id" value={{ id }}> {{ id }}</td>
+                                            <td>{{ tchr_name }}</td>
+                                            <td>{{ tchr_dept }}</td>
+                                            <td>{{ tchr_address }}</td>
+                                            <td>{{ tchr_phone }}</td>
+                                            <td>{{ tchr_email }}</td>
+                                            <td>
+                                                {% if status == "Admitted" %}
+                                                <span class="badge  bg-success">
+                                                {{ status }}
+                                                </span>
+                                                {% elif status == "Denied" %}
+                                                <span class="badge  bg-danger">
+                                                {{ status }}
+                                                </span>
+                                                {% elif status == "Pending" %}
+                                                <span class="badge  bg-warning">
+                                                {{ status }}
+                                                </span>
+                                                {% endif %}</td>
+                                            <td>
+                                                <div class="row" style="margin-right: 0px;margin-left: 0px;width: 174px;">
+                                                    <div class="col d-lg-flex justify-content-lg-center" style="width: 30px;">
+                                                        <input name="status" type="submit" class="btn btn-success shadow-none" value="Approve"></div>
+                                                    <div class="col" style="width: 101px;">
+                                                        <input name="status1" type="submit" class="btn btn-danger shadow-none" value="Deny"></div>
+                                                </div>
+                                            </td>
+                                             </form>
+                                        </tr>
+                                            {% endfor %}
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col-md-6">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" style="margin-right: 1%;margin-left: 30%;" >
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <span><strong> {{ message }} </strong></span>
+  </div>
+</div>
+{% endfor %}
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="static/admin_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/admin_assets/js/bs-init.js"></script>
+    <script src="static/admin_assets/js/theme.js"></script>
+</body>
+
+</html>

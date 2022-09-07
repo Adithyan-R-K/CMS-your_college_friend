@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>e-education</title>
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="static/img/index/Education-amico.svg">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/css/abcd.css">
+    <link rel="stylesheet" href="static/css/btn_index.css">
+    <link rel="stylesheet" href="static/css/Footer-Clean.css">
+    <link rel="stylesheet" href="static/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/loading.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="static/css/Student.css">
+</head>
+
+<body style="user-select: none;background: linear-gradient(-132deg, var(--bs-blue) 0%, #ff6e7f 68%);height: 755.8px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section class="login-clean" style="width: auto;transform: translateY(50px);background: rgba(241,247,252,0);">
+                    <form method="post" style="background: rgba(255,255,255,0);" action="/teacher_login">
+                        {% csrf_token %}
+                        <h1 class="text-capitalize text-center" style="font-size: 35px;font-weight: bold;color: rgba(255,255,255,0.76);">Teacher's login</h1>
+                        <h2 class="visually-hidden">Login Form</h2>
+                        <div class="illustration"><i class="fas fa-chalkboard-teacher" style="color: rgba(255,255,255,0.81);"></i></div>
+                        <div class="mb-3"><input class="form-control" type="email" id="ph-dpink" name="email" placeholder="Email" style="border-radius: 20px;background: rgba(170,65,78,0.19);box-shadow: inset 0px -2px 6px rgba(233,236,239,0.5), inset 2px 2px 6px rgba(255,0,32,0.54);border: none;" required=""></div>
+                        <div class="mb-3"><input class="form-control" type="password" id="ph-dpink" name="password" placeholder="Password" style="border-radius: 20px;background: rgba(170,65,78,0.19);box-shadow: inset 0px -2px 6px rgba(233,236,239,0.5), inset 2px 2px 6px rgba(255,0,32,0.54);border: none;" required=""></div>
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="border-radius: 20px;background: rgb(255,111,128);box-shadow: inset 3px 3px 7px 2px rgba(187,91,103,0.5), inset -2px -2px 3px rgba(0,0,0,0.02);text-shadow: 3px 3px 3px rgba(0,0,0,0.3);">Log In</button></div>
+                        <a class="forgot" href="/teachers_" style="color: var(--bs-gray-100);">I am new here !</a>
+                    </form>
+                </section>
+            </div>
+            <div class="col-md-6 welcome">
+                <p style="transform: translateY(170px);font-weight: bold;font-size: 37px;text-shadow: -10px 8px 10px rgba(0,60,146,0.5);">Black color is sentimentally bad but, every black board makes the students life bright.</p>
+                <p class="text-uppercase" style="transform: translateY(170px);font-weight: bold;text-align: right;text-shadow: -10px 8px 10px rgba(0,60,146,0.5);">-a.p.j.abdual kalam</p>
+                <p class="text-uppercase" style="transform: translateY(170px);font-weight: bold;text-align: center;text-shadow: -10px 8px 10px rgba(0,60,146,0.5);margin-top: 20%;">
+                    {{ mes }}</p>
+            </div>
+        </div>
+    </div>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="static/js/agency.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="static/admin_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="static/admin_assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/admin_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/admin_assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/admin_assets/css/custom.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Login-Form-Clean-1.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/admin_assets/css/Team-Grid.css">
+</head>
+
+<body id="page-top">
+{% csrf_token %}
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow"><a class="nav-link" href="/student_list" style="font-weight: bold;">Go back<i class="fas fa-undo" style="font-size: 20px;padding-left: 5px;"></i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4" style="padding-top: 35px;">Student Info</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 fw-bold">Detailed Info</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="col d-flex justify-content-center" style="height: 170px;"><img class="rounded-circle img-fluid justify-content-xl-center" src="static/admin_assets/img/avatars/avatar3.jpeg" width="170px" height="170px"></div>
+                            <div class="col d-flex justify-content-center">
+                                <div class="table-responsive text-capitalize table mt-2 user-select-none" id="dataTable" role="grid" aria-describedby="dataTable_info" style="width: 900px;">
+                                    <table class="table table-hover my-0" id="dataTable">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 300px;">Name</td>
+                                                <td style="width: 300px;">.....</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Admission No.</td>
+                                                <td>3091</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Course</td>
+                                                <td>BSc CS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Period</td>
+                                                <td>2019-2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Guardian</td>
+                                                <td>....</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td>....</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td>....</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Academic Performance</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">First Year</td>
+                                                <td><span class="badge rounded-pill bg-success">Fully Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">Second Year</td>
+                                                <td><span class="badge rounded-pill bg-warning">Partially Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">Third Year</td>
+                                                <td><span class="badge rounded-pill bg-success">Fully Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fee</td>
+                                                <td><span class="badge bg-success">Paid</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer" style="margin-top: 20px;"></footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="static/admin_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/admin_assets/js/bs-init.js"></script>
+    <script src="static/admin_assets/js/theme.js"></script>
+</body>
+
+</html>

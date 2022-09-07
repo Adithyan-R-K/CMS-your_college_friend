@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>e-education</title>
+    <link rel="icon" type="image/svg+xml" sizes="150x150" href="static/img/index/Education-amico.svg">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="static/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/css/abcd.css">
+    <link rel="stylesheet" href="static/css/btn_index.css">
+    <link rel="stylesheet" href="static/css/Footer-Clean.css">
+    <link rel="stylesheet" href="static/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/loading.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="static/css/Student.css">
+</head>
+
+<body style="user-select: none;background: linear-gradient(-42deg, var(--bs-blue) 32%, #ff6e7f 100%);height: 753.8px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 welcome">
+                <p style="transform: translateY(170px);font-weight: bold;font-size: 37px;">Black color is sentimentally bad but, every black board makes the students life bright.</p>
+                <p class="text-uppercase" style="transform: translateY(170px);font-weight: bold;text-align: right;">-a.p.j.abdual kalam</p>
+            </div>
+            <div class="col-md-6">
+                <section class="login-clean" style="width: auto;background: rgba(241,247,252,0);padding: 0px ;">
+                    {{mes}}
+                    <form method="post"  action="/teachers_signup" style="background: rgba(255,255,255,0);padding-top: 20px;">
+                    {% csrf_token %}
+                        <h1 class="text-capitalize" style="font-size: 30px;font-weight: bold;color: rgba(255,255,255,0.76);width: 302px;">Teacher's Sign up</h1>
+                        <h2 class="visually-hidden">Login Form</h2>
+                        <div class="illustration"><i class="fas fa-chalkboard-teacher" style="color: rgba(255,255,255,0.81);"></i></div>
+                        <div class="mb-3"><input class="form-control teacher-input" type="text" id="ph-w" name="name" placeholder="Name" required=""></div>
+                        <div class="mb-3"><textarea class="form-control teacher-input" id="ph-w" name="address" placeholder="Address" rows="2" cols="1"></textarea></div>
+                        <div class="mb-3"><input class="form-control teacher-input" type="tel" id="ph-w" name="phone" placeholder="Phone" required="" minlength="10" maxlength="10"></div>
+                        <div class="mb-3"><input class="form-control teacher-input" type="email" id="ph-w" name="email" placeholder="Email" required=""></div>
+                        <div class="mb-3"><input class="form-control teacher-input" type="text" id="ph-w" name="department" required="" placeholder="Department"></div>
+                        <div class="mb-3"><input class="form-control teacher-input" type="password" id="ph-w" name="password" placeholder="Password" required=""></div>
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="border-radius: 20px;background: rgb(13,110,253);box-shadow: 4px 4px 10px 4px rgba(13,104,238,0.69), inset -2px -2px 7px 0px rgba(0,0,0,0.02), inset 4px 3px 7px 0px rgba(255,255,255,0.29);">Sign Up</button></div>
+                        <a class="forgot" href="/teachers" style="color: var(--bs-gray-100);">I know this place !</a>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="static/js/agency.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="static/teacher_assets/img/graduate.png">
+    <link rel="stylesheet" href="static/teacher_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/custom.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Login-Form-Clean-1.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Team-Grid.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper" style="background: var(--bs-gray-400);">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="background: linear-gradient(var(--bs-gray-700), var(--bs-gray-700));">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow"><a class="nav-link" href="/t_slist" style="font-weight: bold;">Go back<i class="fas fa-undo" style="font-size: 20px;padding-left: 5px;"></i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid" style="margin-bottom: 6%;padding-left: 7%;padding-right: 7%;">
+                    <h3 class="text-dark mb-4" style="padding-top: 35px;">Student Info</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3" style="background: var(--bs-gray-200);">
+                            <p class="text-primary m-0 fw-bold text-gray-600">Student's Detailed Info</p><a class="text-decoration-none" href="#" style="color: var(--bs-gray-700);" onclick="window.print();">
+                                <div class="d-flex float-end d-md-flex justify-content-center align-items-center justify-content-md-center align-items-md-center" style="overflow: hidden;background: var(--bs-body-bg);width: 40px;border-radius: 50%;height: 40px;margin-right: 3%;border-style: solid;animation-name: enlarge;animation-duration: 6s;animation-timing-function: ease-in-out;animation-iteration-count: infinite;"><i class="fas fa-print" style="color: #8587a2;font-size: 21px;animation-name: print;animation-duration: 6s;animation-timing-function: ease-in-out;animation-iteration-count: infinite;"></i></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="col d-flex justify-content-center" style="height: 170px;"><img class="rounded-circle img-fluid justify-content-xl-center" src="static/teacher_assets/img/avatars/avatar3.jpeg" width="170px" height="170px"></div>
+                            <div class="col d-flex justify-content-center" style="margin-bottom: 2%;">
+                                <div class="table-responsive text-capitalize table mt-2 user-select-none" id="dataTable" role="grid" aria-describedby="dataTable_info" style="width: 900px;">
+                                    <table class="table table-hover my-0" id="dataTable">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width: 300px;">Name</td>
+                                                <td style="width: 300px;">{{ stdnt_name }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Admission No.</td>
+                                                <td>{{ stdnt_adm }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Course</td>
+                                                <td>{{ stdnt_crsname }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Semester</td>
+                                                <td>{{ stdnt_sem }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Guardian</td>
+                                                <td>Father's name: {{ stdnt_faname }} , Mother's name: {{ stdnt_moname }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Address</td>
+                                                <td>{{ stdnt_address }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone</td>
+                                                <td>{{ stdnt_phone }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td>{{ stdnt_email }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Academic Performance</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">First Year</td>
+                                                <td><span class="badge rounded-pill bg-success">Fully Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">Second Year</td>
+                                                <td><span class="badge rounded-pill bg-warning">Partially Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-left: 30px;">Third Year</td>
+                                                <td><span class="badge rounded-pill bg-success">Fully Passed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fee</td>
+                                                <td><span class="badge bg-success">Paid</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="static/teacher_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/teacher_assets/js/bs-init.js"></script>
+    <script src="static/teacher_assets/js/theme.js"></script>
+</body>
+
+</html>

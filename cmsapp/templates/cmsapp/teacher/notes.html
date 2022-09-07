@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="static/teacher_assets/img/graduate.png">
+    <link rel="stylesheet" href="static/teacher_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/custom.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Login-Form-Clean-1.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="static/teacher_assets/css/Team-Grid.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: var(--bs-gray-900);">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>teacher</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="/t_index"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_plist"><i class="fas fa-user-friends"></i><span>Parents</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_slist"><i class="fas fa-user-graduate"></i><span>Students</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_courses"><i class="fas fa-book"></i><span>Courses</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/t_notes"><i class="fas fa-sticky-note"></i><span>Notes</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_exam"><i class="fas fa-pen-alt"></i><span>Exam</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_sfee"><i class="fas fa-money-check-alt"></i><span>Fee</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/t_interaction"><i class="fas fa-comments"></i><span>Interactions</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper" style="background: var(--bs-gray-400);">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="background: linear-gradient(var(--bs-gray-700) 0%, var(--bs-gray-700));">
+                    <div class="container-fluid"><button class="btn d-md-none rounded-circle me-3 shadow-none" id="sidebarToggleTop" type="button" style="border-style: none;"><i class="fas fa-bars" style="border-style: none;color: var(--bs-gray-600);"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form  class="me-auto navbar-search w-100">
+
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                    <span class="d-none d-lg-inline me-2 text-white small text-capitalize">{{trn}}</span><img class="border rounded-circle img-profile" src="{{trpic}}"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in" style="background: var(--bs-gray-700);border-color: var(--bs-gray-300);"><a class="dropdown-item text-gray-500" href="/t_profile"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a>
+                                        <div class="dropdown-divider" style="border-top-width: 2px;border-top-color: var(--bs-gray-600);"></div><a class="dropdown-item text-gray-500" href="/tout"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+{% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" style="margin-right: 1%;margin-left: 30%;" >
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <span><strong> {{ message }} </strong></span>
+  </div>
+</div>
+{% endfor %}
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Notes</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3" style="background: var(--bs-gray-200);">
+                            <p class="text-primary m-0 fw-bold text-gray-600">Upload Notes</p>{{ mes }}
+                        </div>
+                        <div class="card-body">
+                            <form method="post" action="/t_notes_" enctype="multipart/form-data">
+                                {% csrf_token %}
+<!--                                <div class="d-flex justify-content-center"><input name="sub" class="form-control shadow-none" type="text" placeholder="Subject" style="margin-bottom: 20px;width: 60%;"></div>-->
+                                <div class="d-flex justify-content-center">
+                                    <select name="crs" class="form-select shadow-none" style="margin-bottom: 20px;width: 60%;">
+                                        <optgroup label="Course">
+                                            {% for crs in crs %}
+                                                <option value="{{crs}}">{{crs}}</option>
+                                            {% endfor %}
+                                    </select>
+                                </div><div class="d-flex justify-content-center">
+                                    <select name="sub" class="form-select shadow-none" style="margin-bottom: 20px;width: 60%;">
+                                        <optgroup label="Subject">
+                                            {% for sub in sub %}
+                                                <option value="{{sub}}">{{sub}}</option>
+                                            {% endfor %}
+                                    </select>
+                                </div><div class="d-flex justify-content-center">
+                                    <select name="sem" class="form-select shadow-none" style="margin-bottom: 20px;width: 60%;">
+                                        <optgroup label="Semester">
+                                            {% for sem in sem %}
+                                                <option value="{{sem}}">{{sem}}</option>
+                                            {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="d-flex justify-content-center"><input name="file" class="form-control shadow-none" type="file" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" style="margin-bottom: 20px;width: 60%;" required="" title="Please select pdf file."></div>
+                                <div class="d-flex justify-content-center"><textarea name="details" class="form-control shadow-none" style="margin-bottom: 20px;width: 60%;" placeholder="Detail"></textarea></div>
+<!--                                <div class="d-flex justify-content-center"><input name="date" class="form-control shadow-none" type="date" style="margin-bottom: 20px;width: 60%;"></div>-->
+                                <div class="d-flex justify-content-center"><button class="btn shadow-none" type="submit" style="background: var(--bs-gray-500);color: var(--bs-white);">Upload</button></div>
+                            </form>
+                        </div>
+                    </div>
+
+                    {% if uploaded_file_url %}
+                    <p>File Uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a> </p>
+                    {% endif %}
+
+                    <div class="card shadow" style="margin-top: 60px;margin-bottom: 40px;">
+                        <div class="card-header py-3" style="background: var(--bs-gray-200);">
+                            <p class="text-primary m-0 fw-bold text-gray-600">Uploaded Notes</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th class="visually-hidden">Id</th>
+                                            <th>Subject</th>
+                                            <th>Semester</th>
+<!--                                            <th>File Name</th>-->
+                                            <th>Details</th>
+                                            <th>Date Uploaded</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            {% for id, sub, sem, file, details, date in records %}
+                                            <form method="post" action="/t_notes_update">
+                                                 {% csrf_token %}
+                                            <td class="visually-hidden"><input type="hidden" name="n_id" value= {{ id }} > {{ id }}</td>
+                                            <td>{{ sub }}</td>
+                                            <td>{{ sem }}</td>
+<!--                                            <td>{{ file }}</td>-->
+                                            <td>{{ details }}</td>
+                                            <td>{{ date }}</td>
+                                            <td>
+                                                <a class="btn btn-secondary " href="/viewpdf?filenam={{file}}"><i class="fas fa-download" ></i></a>
+<!--                                                <button class="btn btn-info shadow-none dark-info" type="submit" name="edit" value="Edit">Edit</button>-->
+                                                <button class="btn btn-danger shadow-none dark-danger" type="submit" name="remove" value="Remove">Remove</button></div>
+
+<!--                                                <div class="row" style="margin-right: 0px;margin-left: 0px;width: 140px;">-->
+<!--                                                    <div class="col d-lg-flex justify-content-lg-center" style="width: 30px;">-->
+<!--                                                        <button class="btn btn-info shadow-none dark-info" type="submit" name="edit" value="Edit" data-bs-target="#modal-1" data-bs-toggle="modal">Edit</button>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="col" style="width: 101px;">-->
+<!--                                                        <button class="btn btn-danger shadow-none dark-danger" type="submit" name="remove" value="Remove">Remove</button></div>-->
+<!--                                                </div>-->
+                                            </td>
+                                             </form>
+                                        </tr>
+                                    </tbody>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background: var(--bs-gray-200);"><button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body">
+                    {% for file, details, date in record %}
+                    <form method="post" action="/t_notes_update">
+                        {% csrf_token %}
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control shadow-none" type="file" name="file" value="{{ file }}" style="margin-bottom: 20px;width: 60%;" required=""></div>
+                        <div class="d-flex justify-content-center">
+                            <textarea class="form-control shadow-none" style="margin-bottom: 20px;width: 60%;" name="details" value="{{ details }}" placeholder="Detail"></textarea></div>
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control shadow-none" type="date" name="date" value="{{ date }}" style="margin-bottom: 20px;width: 60%;" readonly=""></div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn shadow-none" type="submit" style="background: var(--bs-gray-500);color: var(--bs-white);">Upload</button></div>
+                    </form>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/teacher_assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/teacher_assets/js/bs-init.js"></script>
+    <script src="static/teacher_assets/js/theme.js"></script>
+</body>
+
+</html>
