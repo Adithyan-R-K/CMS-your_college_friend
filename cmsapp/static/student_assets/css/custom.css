@@ -1,0 +1,158 @@
+.tbl-bd {
+  color: var(--bs-info) !important;
+}
+
+.tbl-hd {
+  color: var(--bs-teal) !important;
+}
+
+.cd-hd {
+  color: var(--bs-yellow) !important;
+}
+
+.hd {
+  color: var(--bs-pink);
+}
+
+.hedclr {
+  color: var(--bs-gray-200);
+  background: #6746c3;
+  border-style: none;
+  background: linear-gradient(178deg, rgba(255,255,255,0) 0%, #401f9d 100%);
+  border-radius: 20px !important;
+  box-shadow: 9px 9px 18px #271675, -9px -9px 18px #371ea3 !important;
+}
+
+.neo-navbar {
+  background: none;
+  border-style: none;
+  box-shadow: 5px 5px 20px #1daf92, -3px -3px 5px #27edc6 !important;
+  border-radius: 20px;
+}
+
+.neobtn {
+  color: white;
+  background: #321c93;
+  border-style: none;
+  border-radius: 10px !important;
+  box-shadow: 9px 9px 18px #271675, -9px -9px 18px #371ea3,inset 1px 2px 4px rgba(255,255,255,0.12), inset -1px -2px 4px rgba(0,0,0,0.4) !important;
+}
+
+.neo-m {
+  background: none;
+  border-style: none;
+  border-radius: 20px !important;
+  box-shadow: 9px 9px 18px #271675, -9px -9px 18px #371ea3 !important;
+}
+
+.neo-hed {
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  background: linear-gradient(rgba(29,175,146,0.2) 0%, rgba(39,237,198,0.2) 100%), rgba(248,249,252,0);
+  box-shadow: 0px 8px 30px #1daf92,inset 0px 1px 20px #1daf92, 0px -6px 10px #27edc6,inset 0px -5px 10px #27edc6 !important;
+}
+
+.neo-s {
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  background: #311b92;
+  box-shadow: 9px 9px 18px #271675, -9px -9px 18px #3b20af;
+}
+
+.neo {
+  border-style: none;
+  border-radius: 20px;
+  background: #22ceac;
+  box-shadow: 10px 10px 20px #1daf92, -10px -10px 20px #27edc6;
+}
+
+.dritem {
+  color: rgba(255,255,255,0.6);
+}
+
+.modal-bg {
+  background-color: #401f9d;
+}
+
+.dritem:hover {
+  color: #ffffff;
+  background-color: rgba(255,255,255,0);
+  font-weight: 500;
+}
+
+.dark-danger {
+  background: rgb(232,23,3);
+}
+
+.dark-info {
+  background: rgb(5,179,204);
+}
+
+.btn-info:hover {
+  color: #000 !important;
+  background-color: rgb(0,223,255) !important;
+}
+
+.btn-danger:hover {
+  background-color: #ff1700 !important;
+}
+
+.btn-success:hover {
+  background-color: #00ffa4 !important;
+}
+
+.neo-input[readonly] {
+  margin-bottom: 20px;
+  width: 60%;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #2e1a87;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.6), inset 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.neo-input {
+  margin-bottom: 20px;
+  width: 60%;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #2e1a87;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.6), inset 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.neo-input:focus {
+  margin-bottom: 20px;
+  width: 60%;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #4126ba;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.6), inset 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.neo-inputw {
+  border-style: none;
+  border-radius: 10px;
+  background-color: #2e1a87;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.6), inset 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.neo-inputw:focus {
+  border-style: none;
+  border-radius: 20px;
+  background-color: #4126ba;
+  box-shadow: inset -2px -2px 6px rgba(0,0,0,0.6), inset 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+.m-item {
+  background-color: rgba(255,255,255,0);
+}
+
+.m-item:hover {
+  background-color: rgba(255,255,255,0) !important;
+}
+
+.drdown:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+

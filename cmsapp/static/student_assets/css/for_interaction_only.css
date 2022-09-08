@@ -1,0 +1,66 @@
+.msg::-webkit-scrollbar {
+  display: none;
+}
+
+.time {
+  font-size: 12px;
+  text-align: right;
+  padding-bottom: 3px;
+  font-style: italic;
+}
+
+.msg {
+  padding: 5px;
+  margin: 0px;
+  text-align: left;
+}
+
+.dot {
+  position: relative;
+  left: 99%;
+  top: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+}
+
+.chin {
+  position: sticky;
+  left: 0%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  padding-left: 1px;
+  min-width: 70px;
+  max-width: 45%;
+}
+.chin:hover {
+  background-color: #4126ba;
+}
+
+.chout {
+  position: sticky;
+  left: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding-right: 5px;
+  padding-left: 1px;
+  min-width: 70px;
+  max-width: 45%;
+}
+.chout:hover {
+  background-color: #4126ba;
+}
+
+.chbox {
+  margin-top: -30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
