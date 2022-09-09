@@ -1,0 +1,42 @@
+.dritem {
+  color: rgba(255,255,255,0.6);
+}
+
+.dritem:hover {
+  color: #ffffff;
+  background-color: rgba(255,255,255,0);
+  font-weight: 500;
+}
+
+.dark-danger {
+  background: rgb(232,23,3);
+}
+
+.dark-info {
+  background: rgb(5,179,204);
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes print {
+  0% {
+    transform: translateY(-28px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(28px);
+  }
+}
+
