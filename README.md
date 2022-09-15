@@ -1,5 +1,5 @@
 # college-management-system
-## A python Django based web application for Students, Teachers and parents to interact and learn
+## A Python Django based web application for Students, Teachers and parents to interact and learn
 ### usage
 ```bash
 pip install Django
